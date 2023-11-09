@@ -1,0 +1,2335 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+.red-bold {
+  color: #b10f0f;
+}
+p {
+  margin: 0px;
+}
+.dsp_none {
+  display: none;
+}
+.H2podnaslov {
+  font-size: 40px;
+  font-weight: 600;
+  color: #000;
+}
+.active {
+  background-color: #b10f0f;
+  color: #fff;
+  border: 2px solid #b10f0f;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.h2Line {
+  max-width: 80px;
+  min-height: 5px;
+  background-color: #b10f0f;
+  margin: 10px auto;
+  margin-bottom: 20px;
+}
+
+.podnaslov {
+  font-size: 18px;
+  font-weight: 500;
+  color: #969696;
+}
+.max_391 {
+  max-width: 391px;
+}
+.h2-block {
+  text-align: center;
+}
+.left-align {
+  text-align: left;
+  .h2Line {
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.btn {
+  background-color: #b10f0f;
+  border: 2px solid #b10f0f;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    border: 2px solid #b10f0f;
+    color: #b10f0f;
+    transition: all 0.3s ease;
+  }
+}
+.outline-btn {
+  border: 2px solid #b10f0f;
+  border-radius: 20px;
+  color: #b10f0f;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  &:hover {
+    background-color: #b10f0f;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+}
+.underline_btn {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+.red_btn {
+  color: #b10f0f;
+}
+.container {
+  max-width: 1290px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0px auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.filter-mobile {
+  display: none;
+  margin-bottom: 20px;
+  a {
+    color: #b10f0f;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+nav {
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  .container {
+    margin: 0px auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    .nav_block {
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .nav_links {
+        .links_list {
+          display: flex;
+          list-style-type: none;
+          margin: 0px;
+
+          .nav_link {
+            padding: 10px;
+            margin-left: 20px;
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+              transform: all 0.4s ease;
+            }
+          }
+          .outline-btn {
+            border: 2px solid #b10f0f;
+            border-radius: 20px;
+            color: #b10f0f;
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            &:hover {
+              background-color: #b10f0f;
+              color: #fff;
+              transition: all 0.3s ease;
+              text-decoration: none;
+            }
+          }
+        }
+        .menu-btn {
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          width: 65px;
+          height: 30px;
+          cursor: pointer;
+          transition: all 0.5s ease-in-out;
+          display: none;
+        }
+        .menu-btn .hb-menu {
+          width: 45px;
+          height: 4px;
+          background-color: #000000;
+          border-radius: 5px;
+          transition: all 0.5s ease-in-out;
+        }
+        .menu-btn .hb-menu::before,
+        .menu-btn .hb-menu::after {
+          content: "";
+          position: absolute;
+          width: 45px;
+          height: 4px;
+          background-color: #000000;
+          border-radius: 5px;
+          transition: all 0.5s ease-in-out;
+        }
+        .menu-btn .hb-menu::before {
+          transform: translateY(-12px);
+        }
+        .menu-btn .hb-menu::after {
+          transform: translateY(12px);
+        }
+        .menu-btn.open .hb-menu {
+          transform: translateX(-50px) !important;
+          background-color: transparent !important;
+        }
+        .menu-btn.open .hb-menu::before {
+          transform: rotate(45deg) translate(35px, -35px) !important;
+        }
+        .menu-btn.open .hb-menu::after {
+          transform: rotate(-45deg) translate(35px, 35px) !important;
+        }
+      }
+    }
+  }
+}
+
+//side menu
+.sticky {
+  position: fixed;
+  background: #fff;
+  box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+  transition: all 0.5s ease-in-out;
+}
+.side-menu.none {
+  right: -100%;
+  transition: all 0.5s ease-in-out;
+}
+.side-menu {
+  position: fixed;
+  top: 90px;
+  right: 0px;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  z-index: 999;
+  ul {
+    padding: 0px;
+    li {
+      list-style: none;
+      font-size: 30px;
+      color: #fff;
+      padding: 20px;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+//SLIDER
+#lightboxOverlay,
+.lightboxOverlay {
+  width: 100% !important;
+  height: 100% !important;
+  position: fixed !important;
+}
+
+.lightbox {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+//pagination buttons
+.next,
+.back {
+  cursor: pointer;
+}
+
+.search-btn {
+  padding: 0px 10px;
+  background: #b10f0f;
+  display: block;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+.fs-ddl {
+  width: 105px;
+}
+//SLICK
+
+.slider-nav {
+  .slick-list {
+    padding: 0px !important;
+    .slick-track {
+      display: flex;
+      gap: 10px;
+      .slick-slide {
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.slick-next:before,
+.slick-prev:before {
+  color: #969696;
+}
+.slick-prev {
+  left: -16px;
+}
+
+.slick-next {
+  right: -16px;
+}
+
+header {
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  background-color: #b9b9b9;
+  min-height: 100vh;
+  // background-image: url(../images/staticImages/pancevo_februar_2022_zima.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .overlay {
+    background-color: rgba($color: #17232f, $alpha: 0.6);
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    min-height: calc(100vh - 90px);
+  }
+  .header_container {
+    max-width: 1290px;
+    padding-top: 280px;
+    padding-bottom: 30px;
+    min-height: calc(100vh - 90px);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px auto;
+    position: relative;
+    z-index: 990;
+    .content {
+      height: 100%;
+
+      .hero-text {
+        position: relative;
+        max-width: 630px;
+        .naslov {
+          font-size: 65px;
+          font-weight: 600;
+          line-height: 75px;
+          color: #fff;
+          max-width: 607px;
+        }
+        .hero-podnaslov {
+          margin-top: 20px;
+          font-size: 24px;
+          color: #fff;
+          font-weight: 500;
+          max-width: 564px;
+        }
+        .hero_arrow {
+          position: absolute;
+          bottom: -10px;
+          right: -100px;
+        }
+      }
+      .fast_search_form {
+        margin-top: 20px;
+        background-color: #fff;
+        padding: 30px 50px;
+        border-radius: 40px;
+        width: max-content;
+        .hero_form {
+          display: flex;
+          gap: 40px;
+          .search_block {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            .search_params {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              .fs_input {
+                label {
+                  display: block;
+                  margin-bottom: 5px;
+                  font-size: 22px;
+                }
+                .fs-ddl {
+                  background-color: transparent;
+                  border: none;
+                  font-size: 18px;
+                  font-weight: 600;
+                }
+              }
+            }
+            .form_line {
+              width: 1px;
+              background-color: #000;
+              height: 64px;
+            }
+          }
+        }
+      }
+      .hero_soc_prof {
+        display: flex;
+        gap: 50px;
+        color: #fff;
+        align-items: center;
+        .hero-sp-blok {
+          margin-top: 60px;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          .sp-num {
+            font-size: 60px;
+            font-weight: 600;
+          }
+          .sp-text {
+            font-size: 25px;
+            font-weight: 600;
+            max-width: 144px;
+          }
+        }
+      }
+    }
+  }
+  .hero_soc_links {
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    gap: 15px;
+    .soc_line {
+      height: 80px;
+      width: 2px;
+      background-color: #fff;
+    }
+    .fi {
+      font-size: 32px;
+      height: 32px;
+      width: 32px;
+      color: #fff;
+    }
+  }
+}
+.overlay_rounded {
+  position: absolute;
+  background-color: rgba($color: #323232, $alpha: 0.4);
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+.full_overlay {
+  position: absolute;
+  background-color: rgba($color: #323232, $alpha: 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.container {
+  .usluge {
+    .row {
+      margin-top: 50px;
+      gap: 35px !important;
+      .usluga-blok {
+        max-width: 393px;
+        border-radius: 40px;
+        padding: 30px;
+        -webkit-box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+        -moz-box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+        box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+        .usluga-naslov {
+          font-size: 24px;
+          font-weight: 600;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+        .usluga-text {
+          font-size: 20px;
+          font-weight: 500;
+          max-width: 345px;
+        }
+      }
+    }
+  }
+  .zasto_nas {
+    .row {
+      .img_rounded {
+        border-radius: 40px;
+        position: relative;
+        .img_holder {
+          position: relative;
+          z-index: 900;
+          border-radius: 40px;
+          background-position: center;
+          background-size: cover;
+          max-width: 500px;
+          height: 500px;
+          width: 100%;
+          background-image: url(../images/staticImages/pexels-oleksandr-p-7599735.jpg);
+        }
+        .img_border {
+          width: 500px;
+          height: 500px;
+          border: 2px solid #b10f0f;
+          border-radius: 40px;
+          position: absolute;
+          z-index: 3;
+          left: 55px;
+          top: 25px;
+        }
+      }
+      .content_zn {
+        .content_zasto_nas {
+          margin-top: 25px;
+          .zn_block {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+            .zn_tekst {
+              font-size: 24px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  .o_nama {
+    .row {
+      .o_nama_6 {
+        .o_nama_block {
+          margin-top: 25px;
+          .o_nama_content {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .img_rounded {
+        margin-left: auto;
+        .o_nama_img_holder {
+          position: relative;
+          background-image: url(../images/staticImages/onama.jpg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 40px;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .istaknuti_blogovi {
+    .h2-block {
+      .blog_podnaslov {
+        max-width: 426px;
+        margin: 20px auto;
+      }
+    }
+    .blog_container {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+
+      .single_blog {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .img_blog_holder {
+          max-width: 607px;
+          height: 400px;
+          border-radius: 40px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            object-fit: cover;
+          }
+        }
+        .date_ct {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          color: #969696;
+          font-size: 18px;
+          font-weight: 500;
+          .fi {
+            height: 24px;
+          }
+        }
+        .blog_heading {
+          font-size: 22px;
+          font-weight: 600;
+        }
+        a {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+}
+.istaknute_nekretnine {
+  width: 100%;
+  background-color: #fcfcfc;
+  .container {
+    .in_content {
+      margin-top: 50px;
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .in_ponuda {
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 35px;
+        .nekretnina {
+          max-width: 393px;
+          height: inherit;
+          border-radius: 40px;
+          background-color: #fff;
+          -webkit-box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+          -moz-box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+          box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+          .slika {
+            height: 250px;
+            overflow: hidden;
+
+            border-radius: 40px 40px 0px 0px;
+            transition: all 0.3s ease;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 40px 40px 0px 0px;
+              transition: all 0.3s ease;
+              &:hover {
+                transform: scale(1.4);
+                transition: all 0.3s ease;
+              }
+            }
+          }
+          .nek_blok_info {
+            //index
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 15px;
+
+            .oglas-card-header {
+              height: 80px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              p {
+                margin-bottom: 0px;
+              }
+            }
+            .naziv_nek {
+              font-size: 20px;
+              font-weight: 600;
+            }
+            .info {
+              display: flex;
+
+              flex-wrap: wrap;
+              gap: 10px;
+              align-items: center;
+              .s_karak {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                .nek_karak {
+                  font-weight: 600;
+                }
+              }
+            }
+            .cena {
+              font-weight: 600;
+              font-size: 20px;
+              .cena-bold {
+                font-weight: 700;
+                color: #b10f0f;
+              }
+            }
+            .kratak_opis {
+              max-width: 340px;
+              font-weight: 300;
+              height: 80px;
+            }
+            .nek_btn {
+              margin-right: auto;
+              margin-top: auto;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #fcfcfc;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .footer_links {
+      display: flex;
+      gap: 30px;
+    }
+    .copyright {
+      .footer_bold {
+        font-weight: 600;
+        color: #b10f0f;
+      }
+    }
+  }
+}
+.overlay_block {
+  position: absolute;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+.cta_section {
+  background-image: url(../images/staticImages/cta.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 175px;
+  padding-bottom: 75px;
+  position: relative;
+
+  .cta_content {
+    position: relative;
+    z-index: 800;
+    color: #fff;
+    text-align: center;
+    max-width: 606px;
+    margin: 0px auto;
+    .cta_heading {
+      font-size: 40px;
+      font-weight: 600;
+      max-width: 606px;
+    }
+    .cta_content {
+      font-size: 22px;
+      max-width: 546px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+//Nekretnine page
+.page_h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.page_h2 {
+  font-size: 30px;
+  font-weight: 600;
+  max-width: 714px;
+}
+.single_nek {
+  position: relative;
+  color: #fff;
+  z-index: 800;
+  padding-top: 320px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+  gap: 20px;
+}
+.header_naslov {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .v-line {
+    height: 40px;
+    width: 4px;
+    background-color: #fff;
+  }
+}
+.nekretnine_header {
+  background-image: url(../images/staticImages/pancevo_4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .container {
+    padding: 0px;
+    .nek_header_content {
+      position: relative;
+      color: #fff;
+      z-index: 800;
+      padding-left: 30px;
+      padding-top: 400px;
+      padding-bottom: 90px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .header_naslov {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .v-line {
+          height: 40px;
+          width: 4px;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.container-fluid {
+  .row {
+    .istaknute_nekretnine {
+      width: 70%;
+    }
+    .filters {
+      width: 25%;
+    }
+  }
+}
+
+.blog_header {
+  background-image: url(../images/staticImages/pancevo_februar_2022_zima.jpg);
+  background-position: bottom;
+}
+
+.row {
+  .filters {
+    padding-top: 65px;
+    padding-left: 45px;
+    padding-right: 35px;
+    .filter_heading {
+      color: #b10f0f;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .filteri {
+      padding-bottom: 20px;
+      .input_block {
+        label {
+          font-size: 20px;
+          font-weight: 500;
+          display: block;
+          margin-bottom: 10px;
+        }
+        input,
+        select {
+          width: 100%;
+          padding: 5px;
+          border: 2px solid #000;
+          border-radius: 5px;
+        }
+      }
+      .filter_btn {
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .istaknute_nekretnine {
+    width: auto;
+    background-color: transparent;
+    .in_content {
+      margin-top: 50px;
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .in_ponuda {
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 35px;
+        .nekretnina {
+          max-width: 393px;
+          height: inherit;
+          border-radius: 40px;
+          background-color: #fff;
+          -webkit-box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+          -moz-box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+          box-shadow: -4px 7px 17px 0px rgba(0, 0, 0, 0.31);
+          .slika {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 40px 40px 0px 0px;
+            transition: all 0.3s ease;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 40px 40px 0px 0px;
+              transition: all 0.3s ease;
+              &:hover {
+                transform: scale(1.4);
+                transition: all 0.3s ease;
+              }
+            }
+          }
+          .nek_blok_info {
+            padding: 20px;
+            position: relative;
+            display: flex;
+            height: 430px;
+            flex-direction: column;
+            justify-content: start;
+            gap: 15px;
+            .oglas-card-header {
+              margin-bottom: 10px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              p {
+                margin-bottom: 0px;
+              }
+            }
+            .naziv_nek {
+              font-size: 20px;
+              font-weight: 600;
+              margin-bottom: 10px;
+            }
+            .info {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              flex-wrap: wrap;
+              .s_karak {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                .nek_karak {
+                  font-weight: 600;
+                }
+              }
+            }
+            .cena {
+              font-weight: 600;
+              font-size: 20px;
+              margin-bottom: 10px;
+              margin-top: 10px;
+              .cena-bold {
+                font-weight: 700;
+                color: #b10f0f;
+              }
+            }
+            .kratak_opis {
+              overflow: hidden;
+              font-weight: 300;
+              margin-bottom: 30px;
+            }
+            .nek_btn {
+              margin-top: auto;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .arrows {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        gap: 20px;
+        justify-content: end;
+      }
+      .sort_search {
+        .input_block {
+          label {
+            font-size: 20px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 10px;
+          }
+          input,
+          select {
+            width: 100%;
+            padding: 5px;
+            border: 2px solid #000;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Oglas page
+
+.block_border_radius {
+  border: 2px solid #d9d9d9;
+  border-radius: 20px;
+  padding: 28px;
+}
+.contact_block {
+  margin-left: auto;
+}
+.tip_oglasa {
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 500;
+  p {
+    margin: 0px;
+  }
+}
+.prodaja {
+  background-color: #600fb1;
+}
+.izdavanje {
+  background-color: #b10f60;
+}
+.disclamer {
+  font-size: 16px;
+  font-weight: 600;
+}
+.slider {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.container {
+  .main_info {
+    .oglas_naslov {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .oglas_podnaslov {
+        font-size: 26px;
+        font-weight: 600;
+        margin: 0px;
+        max-width: 70%;
+      }
+      .cena_block {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .cena-bold {
+          color: #b10f0f;
+          font-size: 26px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .row {
+    .slider {
+      margin-top: 30px;
+      .img_slider {
+        .img {
+          border-radius: 10px;
+        }
+      }
+    }
+    .info {
+      width: 59%;
+      .info_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .info_body {
+        margin-top: 28px;
+        .main_oglas_info {
+          .row {
+            .og_left {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              .oglas_naslov {
+                font-size: 40px;
+                font-weight: 500;
+              }
+              .oglas_lokacija {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                .ulica {
+                  font-size: 22px;
+                  font-weight: 500;
+                }
+              }
+            }
+            .og_right {
+              .oglas_cena {
+                text-align: right;
+                .cena_oglasa {
+                  font-size: 35px;
+                  color: #b10f0f;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+        .oglas_opis {
+          margin-top: 28px;
+          .opis_heading {
+            font-size: 20px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .vise_informacija {
+      margin-top: 30px;
+      .nekretnina_informacije {
+        padding: 20px 0px;
+        border-bottom: 2px solid #d9d9d9;
+        display: flex;
+        align-items: center;
+        .specifikacija {
+          width: 30%;
+          font-size: 22px;
+          font-weight: 500;
+        }
+        .vrednost_spec {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .row_info {
+    .kontakt {
+      width: 40%;
+      height: max-content;
+      .kontakt_header {
+        .span_heading {
+          font-size: 26px;
+          font-weight: 500;
+          display: block;
+          margin-bottom: 40px;
+        }
+      }
+      .kontakt_content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .ct_block {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          .kontakt_info {
+            font-size: 20px;
+            font-weight: 600;
+            word-break: break-word;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Blog page
+.container {
+  .istaknuti_blogovi {
+    .blog_page {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+//Blog Post Page
+
+.container {
+  .row {
+    .post {
+      .blog_content {
+        p {
+          max-width: 714px;
+          margin-top: 25px;
+        }
+      }
+    }
+    .recent_blogs {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .side_heading {
+        font-size: 30px;
+        font-weight: 700;
+        display: block;
+      }
+      .linkBlog {
+        text-decoration: none;
+
+        .recent_blog {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          .recent_img_blog_holder {
+            img {
+              width: 100%;
+              border-radius: 20px;
+            }
+          }
+          .recent_blog_info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: #323232;
+            .rc_blog_name {
+              display: block;
+              font-size: 16px;
+              font-weight: 700;
+            }
+            .date_ct {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              font-size: 18px;
+              font-weight: 500;
+              color: #969696;
+              .fi {
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .blog_none {
+    display: none;
+  }
+}
+
+//Kontakt
+
+.container {
+  .kontakt_row {
+    .forma {
+      width: 49%;
+      h2 {
+        font-size: 28px;
+        font-weight: 500;
+      }
+      label {
+        font-size: 22px;
+        font-weight: 500;
+      }
+      input {
+        border-radius: 5px;
+        border-color: #d9d9d9;
+      }
+      .kontakt_forma {
+        margin-top: 35px;
+      }
+    }
+    .kontakt {
+      height: max-content;
+      .kontakt_header {
+        .span_heading {
+          font-size: 26px;
+          font-weight: 500;
+          display: block;
+          margin-bottom: 40px;
+        }
+      }
+      .kontakt_content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .ct_block {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          .kontakt_info {
+            font-size: 20px;
+            font-weight: 600;
+            word-break: break-word;
+          }
+        }
+      }
+    }
+    .kontakt_blok {
+      width: 49%;
+    }
+  }
+}
+
+//Prijava
+.prijava {
+  background-color: #323232;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    form {
+      width: 80%;
+    }
+  }
+}
+//Responsive
+@media screen and (max-width: 1300px) {
+  header {
+    .header_container {
+      .content {
+        .fast_search_form {
+          padding: 30px;
+          .hero_form {
+            .search_block {
+              gap: 20px;
+            }
+            .btn {
+              padding: 10px 20px;
+            }
+          }
+        }
+      }
+      .hero_soc_links {
+        right: 20px;
+      }
+    }
+  }
+  .container {
+    .usluge {
+      .row {
+        justify-content: center;
+        .usluga-blok {
+          max-width: 370px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  header {
+    .header_container {
+      .content {
+        .fast_search_form {
+          padding: 23px;
+          .hero_form {
+            .search_block {
+              gap: 15px;
+              .search_params {
+                .fs_input {
+                  .fs-ddl,
+                  label {
+                    font-size: 16px;
+                  }
+
+                  label {
+                    padding-left: 3px;
+                  }
+                }
+              }
+            }
+            .btn {
+              padding: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    .zasto_nas {
+      .row {
+        .img_rounded {
+          .img_holder {
+            max-width: 460px;
+            height: 460px;
+          }
+          .img_border {
+            width: 460px;
+            height: 460px;
+            left: 25px;
+            top: 16px;
+          }
+        }
+        .content_zn {
+          .content_zasto_nas {
+            .zn_block {
+              img {
+                width: 42px;
+              }
+              .zn_tekst {
+                font-size: 20px;
+              }
+            }
+            .btn {
+              padding: 10px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .container-fluid {
+    .row {
+      .istaknute_nekretnine {
+        .in_content {
+          .in_ponuda {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  header {
+    .header_container {
+      .content {
+        .fast_search_form {
+          padding: 23px;
+          .hero_form {
+            gap: 20px;
+            .search_block {
+              gap: 15px;
+              .search_params {
+                .fs_input {
+                  .fs-ddl,
+                  label {
+                    font-size: 16px;
+                  }
+
+                  label {
+                    padding-left: 3px;
+                  }
+                }
+                .fs_icon {
+                  img {
+                    width: 32px;
+                  }
+                }
+              }
+            }
+            .btn {
+              padding: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 999px) {
+  .H2podnaslov {
+    font-size: 35px;
+  }
+  .podnaslov {
+    font-size: 16px;
+  }
+  .container {
+    .zasto_nas {
+      .row {
+        gap: 1%;
+        justify-content: space-between;
+        align-items: center;
+        .img_rounded {
+          width: 49%;
+          .img_holder,
+          .img_border {
+            width: 390px;
+            height: 390px;
+          }
+        }
+        .content_zn {
+          width: 49%;
+        }
+      }
+    }
+    .o_nama {
+      .row {
+        .img_rounded {
+          height: 600px;
+          margin: 30px auto;
+          width: 90%;
+        }
+      }
+    }
+    .istaknuti_blogovi {
+      .blog_page {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  .container {
+    .row_info {
+      flex-direction: column;
+      gap: 30px;
+      .info,
+      .kontakt {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    .blog_show {
+      .recent_blogs {
+        display: none;
+      }
+    }
+    .blog_none {
+      margin-top: 30px;
+      display: flex;
+    }
+  }
+  header {
+    .header_container {
+      padding-top: 210px;
+      .content {
+        .hero-text {
+          .hero_arrow {
+            position: absolute;
+            bottom: -137px;
+            right: 124px;
+            transform: rotate(45deg);
+          }
+        }
+        .fast_search_form {
+          padding: 23px;
+          width: 360px;
+          .hero_form {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            .search_block {
+              gap: 15px;
+              width: 45%;
+              .search_params {
+                .fs_input {
+                  .fs-ddl,
+                  label {
+                    font-size: 16px;
+                  }
+
+                  label {
+                    padding-left: 3px;
+                  }
+                }
+                .fs_icon {
+                  img {
+                    width: 32px;
+                  }
+                }
+              }
+              .form_line {
+                display: none;
+              }
+            }
+            .btn {
+              padding: 10px;
+              font-size: 18px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.close {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  text-decoration: none;
+  display: none;
+}
+@media screen and (max-width: 920px) {
+  .istaknute_nekretnine {
+    .container {
+      .in_content {
+        .in_ponuda {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+  .filter-mobile {
+    display: block;
+  }
+  .container-fluid {
+    .row {
+      justify-content: center;
+      .filters {
+        position: fixed;
+        overflow: scroll;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0)
+        );
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        transform: translateX(-100%);
+        transition: all 0.5s ease;
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        padding-top: 20px;
+        color: #fff;
+        .close {
+          display: block;
+        }
+      }
+      .openFilter {
+        transform: translateX(0%);
+      }
+      .istaknute_nekretnine {
+        width: 100%;
+        .in_content {
+          .sort_search {
+            .row {
+              gap: 20px;
+            }
+          }
+          .in_ponuda {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  .oglas_istaknute_nek .nek_ct .in_content .in_ponuda {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  nav {
+    .container {
+      .nav_block {
+        .nav_links {
+          .links_list {
+            display: none;
+          }
+          .menu-btn {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .istaknute_nekretnine {
+    .container {
+      .in_content {
+        .buttons {
+          .filter_buttons {
+            .outline-btn {
+              padding: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .container {
+    .zasto_nas {
+      .row {
+        .img_rounded {
+          width: 49%;
+          .img_holder,
+          .img_border {
+            width: 350px;
+            height: 350px;
+          }
+        }
+        .content_zn {
+          width: 49%;
+          .content_zasto_nas {
+            .zn_block {
+              .zn_tekst {
+                font-size: 16px;
+              }
+            }
+            .btn {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    .kontakt_row {
+      flex-direction: column;
+      gap: 20px;
+      .forma {
+        width: 100%;
+        .kontakt_forma {
+          margin-top: 35px;
+        }
+      }
+      .kontakt {
+        width: 100%;
+      }
+    }
+    .row {
+      .vise_informacija {
+        .nekretnina_informacije {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 790px) {
+  .container {
+    .usluge {
+      .row {
+        justify-content: center;
+        .usluga-blok {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+  .istaknute_nekretnine {
+    .container {
+      .in_content {
+        .buttons {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .container {
+    .zasto_nas {
+      .row {
+        .img_rounded {
+          width: 49%;
+          .img_holder,
+          .img_border {
+            width: 310px;
+            height: 310px;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    .main_info {
+      .oglas_naslov {
+        flex-direction: column;
+        text-align: center;
+        .oglas_podnaslov {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    .header_container {
+      .content {
+        .hero_soc_prof {
+          gap: 0px;
+          .hero-sp-blok {
+            .sp-num {
+              font-size: 45px;
+            }
+            .sp-text {
+              max-width: 120px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    .zasto_nas {
+      .row {
+        flex-direction: column-reverse;
+        gap: 30px;
+        .img_rounded {
+          height: 400px;
+          width: 100%;
+          .img_holder,
+          .img_border {
+            width: 100%;
+            margin: 0px auto;
+            max-width: none;
+          }
+          .img_border {
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .content_zn {
+          width: 100%;
+          .content_zasto_nas {
+            .zn_block {
+              .zn_tekst {
+                font-size: 24px;
+              }
+              img {
+                width: 50px;
+                height: 50px;
+              }
+            }
+            .btn {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+    .istaknuti_blogovi {
+      .blog_page {
+        grid-template-columns: auto;
+        justify-content: center;
+        .single_blog {
+          .img_blog_holder {
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  header {
+    .header_container {
+      .content {
+        .hero-text {
+          .naslov {
+            font-size: 55px;
+            line-height: 60px;
+          }
+          .hero-podnaslov {
+            font-size: 20px;
+          }
+          .hero_arrow {
+            right: 23px;
+            transform: rotate(99deg);
+          }
+        }
+      }
+    }
+  }
+
+  .cta_section {
+    .cta_content {
+      .cta_heading {
+        font-size: 30px;
+        max-width: 500px;
+        margin: 0px auto;
+      }
+      .cta_content {
+        font-size: 18px;
+        max-width: 500px;
+        margin: 20pxpx auto;
+      }
+    }
+  }
+  .container-fluid {
+    .row {
+      .istaknute_nekretnine {
+        .in_content {
+          .in_ponuda {
+            grid-template-columns: auto;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    .row {
+      .info {
+        .info_body {
+          .main_oglas_info {
+            .info_row {
+              flex-direction: column;
+              gap: 20px;
+              .og_left {
+                width: 100%;
+              }
+              .og_right {
+                width: 100%;
+                .oglas_cena {
+                  text-align: left;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .istaknute_nekretnine {
+    .container {
+      .in_content {
+        .buttons {
+          flex-direction: column;
+          .filter_buttons {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+          }
+        }
+        .in_ponuda {
+          grid-template-columns: auto;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .container {
+    .istaknuti_blogovi {
+      .blog_container {
+        grid-template-columns: auto;
+      }
+    }
+  }
+  .page_h1 {
+    font-size: 30px;
+  }
+  .container {
+    .blog_show {
+      .post {
+        .blog_content {
+          .page_h2 {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 565px) {
+//   header {
+//     .header_container {
+//       .content {
+//         .hero-text {
+//           .naslov {
+//             font-size: 55px;
+//           }
+//           .hero-podnaslov {
+//             font-size: 20px;
+//           }
+//           .hero_arrow {
+//             width: 90px;
+//             right: 1%;
+//             top: 90%;
+//             transform: rotate(99deg);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media screen and (max-width: 565px) {
+  header {
+    .header_container {
+      .content {
+        .hero-text {
+          .naslov {
+            font-size: 48px;
+            line-height: 53px;
+          }
+          .hero-podnaslov {
+            font-size: 18px;
+          }
+          .hero_arrow {
+            width: 90px;
+            right: 1%;
+            top: 90%;
+            transform: rotate(99deg);
+          }
+        }
+      }
+    }
+  }
+  .container {
+    .row {
+      .recent_blogs {
+        .recent_blog {
+          flex-direction: column;
+          .recent_img_blog_holder {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 476px) {
+  header {
+    .header_container {
+      padding-top: 170px;
+      .content {
+        .hero-text {
+          .naslov {
+            font-size: 48px;
+            line-height: 53px;
+          }
+          .hero-podnaslov {
+            font-size: 18px;
+          }
+          .hero_arrow {
+            display: none;
+          }
+        }
+        .hero_soc_prof {
+          .hero-sp-blok {
+            .sp-num {
+              font-size: 28px;
+            }
+            .sp-text {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .hero_soc_links {
+      right: 5px;
+      bottom: 20px;
+      .fi {
+        font-size: 23px;
+        height: 23px;
+        width: 23px;
+      }
+    }
+  }
+  .container {
+    .o_nama {
+      .row {
+        .o_nama_6 {
+          .o_nama_block {
+            .o_nama_content {
+              font-size: 16px;
+            }
+          }
+        }
+        .img_rounded {
+          width: 100%;
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  header {
+    .header_container {
+      padding-top: 110px;
+
+      .content {
+        .hero_soc_prof {
+          .hero-sp-blok {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+    .hero_soc_links {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 410px) {
+  .container {
+    .zasto_nas {
+      .row {
+        .img_rounded {
+          height: 350px;
+          width: 100%;
+        }
+      }
+    }
+    .row {
+      .kontakt {
+        .kontakt_content {
+          .ct_block {
+            img {
+              width: 32px;
+              height: 32px;
+            }
+            .kontakt_info {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  header {
+    .header_container {
+      padding-top: 160px;
+      .content {
+        .hero-text {
+          .naslov {
+            font-size: 40px;
+            line-height: 45px;
+          }
+          .hero-podnaslov {
+            font-size: 16px;
+          }
+        }
+        .fast_search_form {
+          padding: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  footer {
+    .footer_content {
+      padding-left: 30px;
+      padding-right: 30px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header {
+    .header_container {
+      .content {
+        .fast_search_form {
+          padding: 20px;
+          width: 100%;
+          .hero_form {
+            .search_block {
+              width: 50%;
+            }
+          }
+        }
+        .hero_soc_prof {
+          .hero-sp-blok {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    .row {
+      .info {
+        .info_header {
+          flex-direction: column;
+          align-items: start;
+          gap: 30px;
+          .tip_oglasa {
+            text-align: center;
+          }
+        }
+      }
+      .vise_informacija {
+        .nekretnina_informacije {
+          .specifikacija {
+            font-size: 16px;
+          }
+          .vrednost_spec {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .main_info {
+      .oglas_naslov {
+        .cena_block {
+          flex-direction: column;
+          gap: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* carousel */
+.carousel {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.carousel_inner {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.carousel_inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.carousel_item {
+  position: relative;
+  float: left;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-right: -100%;
+}
+
+/* slide effect */
+.carousel_item__active,
+.carousel_item__pos_next {
+  display: block;
+}
+
+.carousel_item__pos_next {
+  left: 100%;
+}
+
+.carousel_item__next {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* fade effect */
+.carousel__fade .carousel_item__pos_next {
+  left: 0;
+  opacity: 0;
+}
+
+.carousel__fade .carousel_item__next {
+  transform: none;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel__fade .carousel_item__active.carousel_item__next {
+  opacity: 0;
+}
+
+/* carousel */
+.carousel_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel_caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.carousel_title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.carousel_description {
+  margin-top: 0.75rem;
+  line-height: 150%;
+}
